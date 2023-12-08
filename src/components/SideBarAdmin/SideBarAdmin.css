@@ -1,0 +1,8 @@
+.sidebar {
+    background-color: #0c347f;
+    width: 20%;     
+}
+
+.sidebar > p {
+    border-top: 1px solid white;
+}
