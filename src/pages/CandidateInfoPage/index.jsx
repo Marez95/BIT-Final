@@ -1,17 +1,21 @@
-import React from 'react'
-import './CandidateInfoPage.css'
-import Header from "./../../components/Header";
+import React from "react";
+import "./CandidateInfoPage.css";
 import Footer from "../../components/Footer";
+import CandidateAbout from "../../components/CandidateAbout";
 
-const CandidateInfoPage = () => {
+const CandidateInfoPage = ({ data }) => {
+  console.log(data);
   return (
-    <div>
-        <Header />
-        
-        <Footer />
+    <div className="candidateInfoPage">
+      <CandidateAbout
+        name={data.name}
+        email={data.email}
+        birthday={data.birthday}
+        education={data.education}
+      />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default CandidateInfoPage
-
+export default CandidateInfoPage;

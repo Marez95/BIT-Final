@@ -4,7 +4,8 @@ import "./SideBarAdmin.css"
 const SideBarAdmin = () => {
   return (
     <div className='sidebar'>
-        <p>Sidebar</p>
+        <h3><u>Reports</u></h3>
+        <h3><u>Create Reports</u></h3>
     </div>
   )
 }

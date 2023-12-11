@@ -1,24 +1,26 @@
 import React from "react";
 import "./CandidatePage.css";
 import { useNavigate } from "react-router-dom";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
-const Candidates = ({ candidates }) => {
+const Candidates = ({ candidates, setSelectedCandidate }) => {
   const navigate = useNavigate();
 
-  const redirectToCandidates = () => {
+  const redirectToCandidates = (obj) => {
+    setSelectedCandidate(obj);
     navigate("/candidateInfo");
   };
   console.log(candidates);
   return (
     <div className="all-candidates">
-      <Header />
-
       {candidates?.map((kandidat) => {
         console.log(kandidat);
         return (
-          <div onClick={redirectToCandidates} className="single-candidate">
+          <div
+            onClick={() => {
+              redirectToCandidates(kandidat);
+            }}
+            className="single-candidate"
+          >
             <img src={kandidat.avatar} alt="asdasd" />
             <p>Name: {kandidat.name}</p>
             <p>Email: {kandidat.email}</p>
@@ -27,7 +29,6 @@ const Candidates = ({ candidates }) => {
           </div>
         );
       })}
-      <Footer />
     </div>
   );
 };

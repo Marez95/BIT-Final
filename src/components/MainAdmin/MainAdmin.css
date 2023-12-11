@@ -38,3 +38,8 @@
     height: 250px;
     background-color: rgb(225, 255, 196);
 }
+
+.features {
+    display: flex;
+    padding: 10px;
+}

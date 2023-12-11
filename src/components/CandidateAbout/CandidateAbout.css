@@ -1,0 +1,21 @@
+.candidate-info{
+    align-items: center;
+    padding-top:40px ;
+   
+   
+}
+.info-card{
+    background-color: salmon;
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+   
+
+}
+.info-card>img{
+    width: 40%;
+    padding:25px ;
+    
+
+}
