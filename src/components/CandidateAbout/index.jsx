@@ -1,8 +1,7 @@
 import React from "react";
 import "../CandidateAbout/CandidateAbout.css";
-import Candidates from "../../pages/CandidatePage";
 
-const CandidateAbout = ({ name, email,birthday, education }) => {
+const CandidateAbout = ({ name, email, birthday, education }) => {
   return (
     <div className="candidate-info">
       <div className="info-card">
