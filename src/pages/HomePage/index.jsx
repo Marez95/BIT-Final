@@ -1,10 +1,10 @@
 import React from "react";
 import "./HomePage.css";
 import Main from "../../components/Main";
-function App() {
+function App({ token }) {
   return (
     <div className="HomePage">
-      <Main />
+      <Main token={token} />
     </div>
   );
 }

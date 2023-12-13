@@ -1,28 +1,41 @@
 .main {
     display: flex;
     flex: 1;          
-    background-color: grey;
-    flex-direction: row;                                                                   
-}
+    /* background-color: #FDFEFE; */
+    color:#001f3f;
+    flex-direction: row;         
+    font-family: 'Montserrat', sans-serif;              
+    font-weight: 600;       
+           background-image: url('/src/components/images/pozadina.jpg');    
+            background-size: contain;              
+} 
 
 .main-intro {
     padding-left: 20px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: column;
 }
 
 .main-intro > h1 {
     font-weight: 900;
+    color:#2ecc71;
+    padding-left: 50px;
+    font-size:50px;
 }
 
 .main-intro > p {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    padding: 50px;
+    color: #FDFEFE;
+    line-height: 1.5;
+    
 }
 
 .main-photo {
     padding: 30px;
     margin-top: 150px;
+    
 }
 
 .main-buttons {
@@ -37,13 +50,17 @@
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid black;
+  border: 1px solid #2ecc71;
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color :#2ecc71;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  color:#001f3f;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 15px;  
   
 }
 
@@ -78,13 +95,19 @@
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid black;
+  border: 1px solid #2ecc71;
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color :#2ecc71;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  color: #001f3f;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;  
+  border-radius: 15px;
+  
+  
 }
 
 .admin-button:after {
@@ -108,4 +131,8 @@
   .admin-button {
     padding: 13px 50px 13px;
   }
+}
+span {
+  color:#2ecc71;
+
 }

@@ -24,8 +24,8 @@ const Candidates = ({ candidates, setSelectedCandidate }) => {
             <img src={kandidat.avatar} alt="asdasd" />
             <p>Name: {kandidat.name}</p>
             <p>Email: {kandidat.email}</p>
-            <p>Birthday: {kandidat.birthday}</p>
-            <p>Education: {kandidat.education}</p>
+            {/* <p>Birthday: {kandidat.birthday}</p>
+            <p>Education: {kandidat.education}</p> */}
           </div>
         );
       })}
