@@ -1,19 +1,47 @@
 .sidebar {
-    background-color: #388185;
-    width: 20%;     
+  background-color: rgb(192, 186, 185);
+  width: 20%;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
 .sidebar > button {
-    padding: 20px;
-    background-color: #388185;
-    color: white;
-    border-radius: 15px;
-    cursor: pointer;
+  padding: 20px;
+  background-color: #001f3f;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
 }
+
+.log-out > button { 
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid #2ecc71;
+    cursor: pointer;
+    position: relative;
+    background-color :#2ecc71;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    color:#001f3f;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px; 
+}
+
+.log-out {
+    display: flex;
+    flex-direction: column;
+    padding-top: 550px;
+}
+
+

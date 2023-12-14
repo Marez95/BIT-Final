@@ -19,6 +19,7 @@ const App = () => {
   const [companies, setCompanies] = useState([]);
   // stefan komentar!!! pogledati
   const [token, setToken] = useState(JSON.parse(localStorage.getItem("token")));
+  const [freshData, setFreshData] = useState(false)
 
 
   function fetchDataCandidates() {
@@ -37,13 +38,13 @@ const App = () => {
         setAdminReports(data);
       });
   }
-  function fetchDataCompanies(){
+  function fetchDataCompanies() {
     fetch("http://localhost:3333/api/companies")
-    .then((res)=> res.json())
-    .then((data)=>{
-      setCompanies(data);
-      console.log(data);
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        setCompanies(data);
+        console.log(data);
+      });
   }
 
   // function fetchImages() {
@@ -55,11 +56,18 @@ const App = () => {
   useEffect(() => {
 
     fetchDataCandidates()
-    fetchDataReports() 
     fetchDataCompanies()
-    // fetchImages();
 
   }, [])
+
+  useEffect(() => {
+
+    fetchDataReports()
+    // fetchImages();
+
+  }, [freshData])
+
+
 
   return (
     <div className='app'>
@@ -71,9 +79,9 @@ const App = () => {
           {/* <Route path="/admin-login" element={<LoginModal setToken={setToken} token={token} />} /> */}
           <Route path="/candidates" element={<CandidatePage setSelectedCandidate={setSelectedCandidate} candidates={candidates} />} />
           <Route path="/candidateInfo" element={<CandidateInfoPage data={selectedCandidate} />} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/wizard" element={<WizardPage  setSelectedCandidate={setSelectedCandidate} candidates={candidates} companies={companies} setCompanies={setCompanies} />} />
-          <Route path="/adminReports" element={<AdminReports adminReports={adminReports} />} />
+          <Route path="/admin" element={<AdminPage setToken={setToken}/>} />
+          <Route path="/wizard" element={<WizardPage setSelectedCandidate={setSelectedCandidate} setFreshData={setFreshData} token={token} candidates={candidates} companies={companies} setCompanies={setCompanies} />} />
+          <Route path="/adminReports" element={<AdminReports adminReports={adminReports} token={token} setFreshData={setFreshData} />} />
           <Route path="/adminCreateReports" element={<AdminCreateReports />} />
         </Routes>
         <Footer />

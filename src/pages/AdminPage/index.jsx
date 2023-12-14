@@ -3,11 +3,11 @@ import "./AdminPage.css";
 import SideBarAdmin from "../../components/SideBarAdmin";
 import MainAdmin from "../../components/MainAdmin";
 
-const AdminPage = () => {
+const AdminPage = ({setToken}) => {
   return (
     <div className="AdminPage">
       <div className="sidebarAndMain">
-        <SideBarAdmin />
+        <SideBarAdmin setToken={setToken} />
         <MainAdmin />
       </div>
     </div>

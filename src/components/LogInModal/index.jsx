@@ -28,7 +28,7 @@ const LogInModal = ({ setToken, token }) => {
 
   return (
     <>
-      <div>
+      <div className="admin-login">
         <input
           type="text"
           placeholder="Username"
@@ -41,8 +41,8 @@ const LogInModal = ({ setToken, token }) => {
           placeholder="Password"
           onChange={(e) => setBody({ ...body, password: e.target.value })}
         ></input>
-      </div>
       <button onClick={login}>Login</button>
+      </div>
     </>
   );
 };

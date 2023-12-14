@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 const AdminCreateReports = () => {
   return (
-    <div>AdminCreateReports</div>
+    <div></div>
   )
 }
 

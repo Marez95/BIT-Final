@@ -34,87 +34,75 @@
   "candidates": [
     {
       "id": 9451057,
-      "name": "Zula Feeney",
+      "name": "Milan Belovodjanin",
       "birthday": "Tue Sep 12 2017 16:57:16 GMT+0200 (CEST)",
-      "email": "Mathew.Schultz6@yahoo.com",
+      "email": "milanbelovodjanin@yahoo.com",
       "education": "Belgrade Institute of Technology",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/48/Novak_Djokovi%C4%87_Trophy_Wimbledon_2019-croped_and_edited.jpg",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/48/Novak_Djokovi%C4%87_Trophy_Wimbledon_2019-croped_and_edited.jpg"
+      "avatar": "https://www.davd.photo/wp-content/uploads/2019/03/rocco-roxie-employee-headshots-4.jpg"
     },
     {
       "id": 88648435,
-      "name": "Mireya Beahan IV",
+      "name": "Aleksandar Kopcic",
       "birthday": "Mon Feb 27 2017 05:26:30 GMT+0100 (CET)",
-      "email": "Armani_Goldner61@hotmail.com",
+      "email": "aleksandarkopcic@hotmail.com",
       "education": "Belgrade Institute of Technology",
-      "avatar": "https://prod-media.beinsports.com/image/1700424023079_0a8bc89f-3dd8-4466-b2ef-b8c541cdb6ef.jpg"
+      "avatar": "https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1663-1-1024x683.jpg"
     },
     {
       "id": 99087456,
-      "name": "Carolina Bahringer",
+      "name": "Marta Vladisavljevic",
       "birthday": "Fri Nov 17 2017 05:50:30 GMT+0100 (CET)",
-      "email": "Miller_Bauch@yahoo.com",
+      "email": "martavladisavljevic@yahoo.com",
       "education": "Belgrade Institute of Technology",
-      "avatar": "https://prod-media.beinsports.com/image/1700424023079_0a8bc89f-3dd8-4466-b2ef-b8c541cdb6ef.jpg"
+      "avatar": "https://img.freepik.com/premium-photo/woman-smiling-camera_777078-63292.jpg"
     },
     {
       "id": 66318927,
-      "name": "Lourdes Kuhn",
+      "name": "Pavle Stojiljkovic",
       "birthday": "Tue Aug 29 2017 04:35:15 GMT+0200 (CEST)",
-      "email": "Leonel33@gmail.com",
+      "email": "pavlestojiljkovic@gmail.com",
       "education": "Faculty of Electrical Engineering",
-      "avatar": "https://prod-media.beinsports.com/image/1700424023079_0a8bc89f-3dd8-4466-b2ef-b8c541cdb6ef.jpg"
+      "avatar": "https://photogenika.de/wp-content/uploads/2022/01/03_Business_Portrait_Muenchen-Photogenika-scaled.jpg"
     },
     {
       "id": 89091536,
-      "name": "Brennon Rolfson",
+      "name": "DR Vedrana Gavric",
       "birthday": "Mon Feb 06 2017 14:22:06 GMT+0100 (CET)",
-      "email": "Alexa_Veum@hotmail.com",
+      "email": "drvedranagavric@hotmail.com",
       "education": "Belgrade Institute of Technology",
-      "avatar": "https://prod-media.beinsports.com/image/1700424023079_0a8bc89f-3dd8-4466-b2ef-b8c541cdb6ef.jpg"
+      "avatar": "https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1210-1024x683.jpg"
     },
     {
       "id": 6496882,
-      "name": "Jeanette Mohr",
+      "name": "Lazar Puzovic",
       "birthday": "Tue Dec 12 2017 11:33:07 GMT+0100 (CET)",
-      "email": "Joseph_Terry35@hotmail.com",
+      "email": "lazarpuzovic@hotmail.com",
       "education": "Belgrade Institute of Technology",
-      "avatar": "https://prod-media.beinsports.com/image/1700424023079_0a8bc89f-3dd8-4466-b2ef-b8c541cdb6ef.jpg"
+      "avatar": "https://i0.wp.com/www.davd.photo/wp-content/uploads/2019/03/rocco-roxie-employee-headshots-1.jpg?ssl=1"
     }
   ],
   "reports": [
     {
-      "id": 33060290,
-      "candidateId": 9451057,
-      "candidateName": "Zula Feeney",
-      "companyId": 92859858,
-      "companyName": "Volkman - Schimmel",
-      "interviewDate": "Fri Jan 10 2018 20:13:29 GMT+0100 (CET)",
-      "phase": "hr",
-      "status": "passed",
-      "note": "Rerum accusantium expedita consequatur quo non error et. Animi consequatur magnam et impedit. Beatae et voluptatem labore repudiandae labore totam ut esse. Cum quidem in nobis et necessitatibus reiciendis officia voluptas. Quia aut dignissimos totam ut. Ut quo non nam quaerat consequatur quo qui."
+      "candidateId": "9451057",
+      "candidateName": "Milan Belovodjanin",
+      "companyId": "32220706",
+      "companyName": "Thompson, Grimes and Wolf",
+      "interviewDate": "Fri Jan 12 2028 08:39:19 GMT+0100 (CET)",
+      "phase": "interview",
+      "status": "declined",
+      "note": "asdasdasda",
+      "id": 61646705
     },
     {
-      "id": 62339440,
-      "candidateId": 9451057,
-      "candidateName": "Zula Feeney",
-      "companyId": 92859858,
-      "companyName": "Volkman - Schimmel",
-      "interviewDate": "Fri Jan 11 2018 15:23:09 GMT+0100 (CET)",
-      "phase": "cv",
-      "status": "passed",
-      "note": "Suscipit dolores sed consectetur natus quaerat laboriosam id est quam. Nihil dolor iusto quisquam expedita. Itaque aut sed magnam doloremque numquam culpa nostrum blanditiis. Est non impedit architecto error commodi. Dignissimos fugiat eum voluptatem. Libero quisquam repellat."
-    },
-    {
-      "id": 61646703,
-      "candidateId": 66318927,
-      "candidateName": "Lourdes Kuhn",
-      "companyId": 11081915,
-      "companyName": "Krajcik Inc",
-      "interviewDate": "Fri Jan 12 2018 08:39:19 GMT+0100 (CET)",
+      "candidateId": "88648435",
+      "candidateName": "Aleksandar Kopcic",
+      "companyId": "35251209",
+      "companyName": "Konopelski - Romaguera",
+      "interviewDate": "Fri Jan 12 2028 08:39:19 GMT+0100 (CET)",
       "phase": "cv",
       "status": "declined",
-      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+      "note": "",
+      "id": 61646706
     }
   ],
   "users": [

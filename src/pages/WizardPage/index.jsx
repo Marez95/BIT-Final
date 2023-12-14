@@ -5,9 +5,16 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import "./WizardPage.css";
+import { useNavigate } from "react-router-dom";
 const steps = ["Select Candidate", "Select Company", "Submit Report"];
 // const Candidates=[{candidates,setSelectedCandidates]
-export default function HorizontalLinearStepper({ candidates, companies }) {
+export default function HorizontalLinearStepper({
+  candidates,
+  companies,
+  token,
+  setFreshData,
+}) {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const [data, setData] = React.useState({
@@ -20,6 +27,24 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
     status: "",
     note: "",
   });
+  const navigate = useNavigate();
+
+  const createReport = async () => {
+    const res = await fetch("http://localhost:3333/api/reports", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      setFreshData((pre) => !pre);
+      navigate("/adminReports");
+    }
+  };
+
   console.log(data);
   const handleSelectCandidate = (e) => {
     setData({
@@ -36,16 +61,17 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
     });
   };
   const handleSelectStatus = (e) => {
-    setData ({
+    setData({
       ...data,
-      status: e.target.value
-    })
-  }
+      status: e.target.value,
+    });
+  };
   const handleSelectPhase = (e) => {
-    setData ({
+    setData({
       ...data,
-      phase: e.target.value
-    })}
+      phase: e.target.value,
+    });
+  };
   const handleInput = (e) => {
     setData({ ...data, note: e.target.value });
     // setData((prevState) => {
@@ -87,7 +113,7 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
     setActiveStep(0);
   };
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ minHeight: "90vh" }} className="boxic">
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
@@ -107,7 +133,7 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
       </Stepper>
       {activeStep === steps.length ? (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>
+          <Typography sx={{ mt: 2, mb: 10 }}>
             All steps completed - you&apos;re finished
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
@@ -117,12 +143,15 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>
+          <Typography className="firststep" sx={{ mt: 5, mb: 10 }}>
             {activeStep === 0 &&
               candidates.map((candidate) => (
-                <div>
-                  {candidate.name}
+                <div className="wizard">
+                  <span style={{ width: "200px", display: "inline-block" }}>
+                    {candidate.name}
+                  </span>
                   <input
+                    style={{ width: "50px", height: "20px" }}
                     onChange={handleSelectCandidate}
                     value={candidate.name}
                     id={candidate.id}
@@ -133,9 +162,13 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
               ))}{" "}
             {activeStep === 1 &&
               companies.map((companies) => (
-                <div>
-                  {companies.name}
+                <div className="wizard">
+                  <span style={{ width: "200px", display: "inline-block" }}>
+                    {" "}
+                    {companies.name}
+                  </span>
                   <input
+                    style={{ width: "50px", height: "20px" }}
                     type="radio"
                     name="companies"
                     onChange={handleSelectCompanies}
@@ -144,24 +177,41 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
                   />
                 </div>
               ))}
-            {activeStep === 2 && <h2>SELECT PHASE</h2>}
+            {activeStep === 2 && <h2 className="wizard">SELECT PHASE</h2>}
             {activeStep === 2 &&
               ["hr", "cv", "ti", "interview"].map((phase) => (
-                <div>
-                  {phase}
-                  <input type="radio" name="phase" value={phase} onChange={handleSelectPhase} />
+                <div className="wizard">
+                  <span style={{ width: "200px", display: "inline-block" }}>
+                    {phase}
+                  </span>
+                  <input
+                    style={{ width: "50px", height: "20px" }}
+                    type="radio"
+                    name="phase"
+                    value={phase}
+                    onChange={handleSelectPhase}
+                    sx={{ display: "block" }}
+                  />
                   <div></div>
                 </div>
               ))}
-            {activeStep === 2 && <h2>SELECT STATUS</h2>}
+            {activeStep === 2 && <h2 className="wizard">SELECT STATUS</h2>}
             {activeStep === 2 &&
               ["declined", "passed"].map((status) => (
-                <div>
-                  {status}
-                  <input type="radio" name="status" value={status} onChange={handleSelectStatus} />
+                <div className="wizard">
+                  <span style={{ width: "200px", display: "inline-block" }}>
+                    {status}
+                  </span>
+                  <input
+                    style={{ width: "50px", height: "20px" }}
+                    type="radio"
+                    name="status"
+                    value={status}
+                    onChange={handleSelectStatus}
+                  />
                 </div>
               ))}
-            {activeStep === 2 && <h2>NOTES</h2>}
+            {activeStep === 2 && <h2 className="wizard">NOTES</h2>}
             {activeStep === 2 && (
               <textarea
                 onChange={handleInput}
@@ -173,8 +223,16 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
               ></textarea>
             )}
           </Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              pt: 2,
+              justifyContent: "center",
+            }}
+          >
             <Button
+              className="backwiz"
               color="inherit"
               disabled={activeStep === 0}
               onClick={handleBack}
@@ -182,15 +240,11 @@ export default function HorizontalLinearStepper({ candidates, companies }) {
             >
               Back
             </Button>
-            <Box sx={{ flex: "1 1 auto" }} />
-            {isStepOptional(activeStep) && (
-              <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
-                Skip
-              </Button>
+            {activeStep === steps.length - 1 ? (
+              <Button onClick={createReport}>Finish</Button>
+            ) : (
+              <Button onClick={handleNext}>Next</Button>
             )}
-            <Button onClick={handleNext}>
-              {activeStep === steps.length - 1 ? "Finish" : "Next"}
-            </Button>
           </Box>
         </React.Fragment>
       )}

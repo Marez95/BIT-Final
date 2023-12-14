@@ -1,23 +1,47 @@
-import React from 'react'
+import React from "react";
+import "./AdminReports.css";
 
-const AdminReports = ({adminReports, setSelectedReport}) => {
+const AdminReports = ({
+  adminReports,
+  setSelectedReport,
+  token,
+  setFreshData,
+}) => {
+  const deleteReport = async (id) => {
+    const res = await fetch(`http://localhost:3333/api/reports/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
-
+    if (res.ok) {
+      setFreshData((pre) => !pre);
+    }
+  };
 
   return (
-    <div className='admin-reports'>
-      {adminReports?.map((kandidat) => {
-        console.log(kandidat);
+    <div className="admin-reports">
+      {adminReports?.map((report) => {
+        console.log(report);
         return (
           <div>
-            <img src={kandidat.avatar} alt="asdasd" />
-            <p>Name: {kandidat.name}</p>
-            <p>Email: {kandidat.email}</p>
+            <p>Name: {report.candidateName}</p>
+            <p>Company Name: {report.companyName}</p>
+            <p>Interview Date: {report.interviewDate}</p>
+            <p>Phase: {report.phase}</p>
+            <p>Status: {report.status}</p>
+            <img
+              src="https://www.svgrepo.com/download/21045/delete-button.svg"
+              alt=""
+              onClick={() => deleteReport(report.id)}
+            />
+            <hr />
           </div>
         );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default AdminReports
+export default AdminReports;

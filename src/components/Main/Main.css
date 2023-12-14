@@ -1,50 +1,49 @@
 .main {
-    display: flex;
-    flex: 1;          
-    /* background-color: #FDFEFE; */
-    color:#001f3f;
-    flex-direction: row;         
-    font-family: 'Montserrat', sans-serif;              
-    font-weight: 600;       
-           background-image: url('/src/components/images/pozadina.jpg');    
-            background-size: contain;              
-} 
+  display: flex;
+  flex: 1;
+  /* background-color: #FDFEFE; */
+  color: #001f3f;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-image: url("/src/components/images/pozadina.jpg");
+  background-size: contain;
+}
 
 .main-intro {
-    padding-left: 20px;
-    display: flex;
-    /* justify-content: space-between; */
-    flex-direction: column;
+  padding-left: 20px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
 }
 
 .main-intro > h1 {
-    font-weight: 900;
-    color:#2ecc71;
-    padding-left: 50px;
-    font-size:50px;
+  font-weight: 900;
+  color: #2ecc71;
+  padding-left: 50px;
+  font-size: 50px;
 }
 
 .main-intro > p {
-    letter-spacing: 2px;
-    padding: 50px;
-    color: #FDFEFE;
-    line-height: 1.5;
-    
+  letter-spacing: 2px;
+  padding: 50px;
+  color: #fdfefe;
+  line-height: 1.5;
 }
 
-.main-photo {
-    padding: 30px;
-    margin-top: 150px;
-    
+.main-photo > img {
+  padding: 30px;
+  margin-top: 150px;
+  width: 800px;
 }
 
 .main-buttons {
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-around;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.get-started-button  {
+.get-started-button {
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;
@@ -53,15 +52,14 @@
   border: 1px solid #2ecc71;
   cursor: pointer;
   position: relative;
-  background-color :#2ecc71;
+  background-color: #2ecc71;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  color:#001f3f;
+  color: #001f3f;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 15px;  
-  
+  font-family: "Montserrat", sans-serif;
+  border-radius: 15px;
 }
 
 .get-started-button:after {
@@ -82,11 +80,10 @@
 }
 
 @media (min-width: 768px) {
-  .get-started-button{
+  .get-started-button {
     padding: 13px 50px 13px;
   }
 }
-
 
 /* CSS */
 .admin-button {
@@ -98,16 +95,14 @@
   border: 1px solid #2ecc71;
   cursor: pointer;
   position: relative;
-  background-color :#2ecc71;
+  background-color: #2ecc71;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   color: #001f3f;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;  
+  font-family: "Montserrat", sans-serif;
   border-radius: 15px;
-  
-  
 }
 
 .admin-button:after {
@@ -133,6 +128,5 @@
   }
 }
 span {
-  color:#2ecc71;
-
+  color: #2ecc71;
 }
