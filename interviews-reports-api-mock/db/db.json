@@ -103,6 +103,17 @@
       "status": "declined",
       "note": "",
       "id": 61646706
+    },
+    {
+      "candidateId": "89091536",
+      "candidateName": "DR Vedrana Gavric",
+      "companyId": "32220706",
+      "companyName": "Thompson, Grimes and Wolf",
+      "interviewDate": "Fri Jan 12 2028 08:39:19 GMT+0100 (CET)",
+      "phase": "ti",
+      "status": "passed",
+      "note": "da",
+      "id": 61646708
     }
   ],
   "users": [

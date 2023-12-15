@@ -10,18 +10,14 @@
   font-weight: bold;
 }
 
-.backwiz {
-  color: red !important;
-} */
+
 
 /* .MuiBox-root.css-2royc9 {
     background-color: rgb(10, 10, 149);
     display: flex;
 } */
 
-/* textarea {
-    background-color: aqua;
-}  */
+
 
 /* .wizard {
     display: flex;
@@ -37,4 +33,25 @@
 .wizard {
   width: fit-content;
   margin: 0 auto;
+  
 }
+.boxic{
+  background-color: black;
+  /* color: #808080; */
+
+}
+textarea{
+  background-color: #808080;
+  font-family:"Montserrat", sans-serif;
+  padding: 10px;
+  border-radius: 15px;
+  height: 200px;
+  width: 80%;
+  margin-left: 140px;
+}
+.margin{
+  margin: 10px;
+  
+ 
+}
+

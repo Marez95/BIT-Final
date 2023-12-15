@@ -1,5 +1,6 @@
 .main-admin {
-  background-image: url("/src/components/images/pozadina.jpg");
+  /* background-image: url("/src/components/images/pozadina.jpg"); */
+  background-color: black;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -10,4 +11,18 @@
 .features {
   display: flex;
   padding: 10px;
+  justify-content: space-between;
+  margin: 10px;
+  
+}
+.notes{
+  background-color: #808080;
+  height: 200px;
+  padding: 10px;
+  margin: 20px;
+  width: 80%;
+  cursor: pointer;
+}
+hr{
+  border: 1px solid black;
 }

@@ -23,10 +23,10 @@ const SideBarAdmin = ({setToken}) => {
 
   return (
     <div className='sidebar'>
-       <button onClick={redirectToAdminCreateReports}>Create Reports</button>
-       <button onClick={redirectToAdminReports}>Reports</button>
+       <button onClick={redirectToAdminCreateReports} className='buttons'>Create Reports</button>
+       <button onClick={redirectToAdminReports} className='buttons'>Reports</button>
        <div className="log-out">
-        <button onClick={logOut}>Log out</button>
+        <button onClick={logOut} className='buttonl'>Log out</button>
        </div>
     </div>
   )

@@ -2,14 +2,15 @@
   display: flex;
   flex: 1;
   /* background-color: #FDFEFE; */
-  color: #001f3f;
+  /* color: #001f3f; */
   flex-direction: row;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  background-image: url("/src/components/images/pozadina.jpg");
+  /* background-image: url("/src/components/images/pozadina.jpg"); */
+  background-color: black;
   background-size: contain;
 }
-
+*{font-family: "Montserrat", sans-serif;}
 .main-intro {
   padding-left: 20px;
   display: flex;
@@ -19,7 +20,7 @@
 
 .main-intro > h1 {
   font-weight: 900;
-  color: #2ecc71;
+  color: #808080;
   padding-left: 50px;
   font-size: 50px;
 }
@@ -49,14 +50,14 @@
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid #2ecc71;
+  border: 1px solid #808080;
   cursor: pointer;
   position: relative;
-  background-color: #2ecc71;
+  background-color: #808080;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  color: #001f3f;
+  color: black;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   border-radius: 15px;
@@ -64,7 +65,7 @@
 
 .get-started-button:after {
   content: "";
-  background-color: #ffe54c;
+  /* background-color: #ffe54c; */
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -92,14 +93,14 @@
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid #2ecc71;
+  border: 1px solid #808080;
   cursor: pointer;
   position: relative;
-  background-color: #2ecc71;
+  background-color: #808080;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  color: #001f3f;
+  color: black;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   border-radius: 15px;
@@ -107,7 +108,7 @@
 
 .admin-button:after {
   content: "";
-  background-color: #ffe54c;
+  /* background-color: #ffe54c; */
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -128,5 +129,6 @@
   }
 }
 span {
-  color: #2ecc71;
+  color: #808080 !important;
+  font-size: larger;
 }

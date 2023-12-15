@@ -31,11 +31,14 @@ const AdminReports = ({
             <p>Interview Date: {report.interviewDate}</p>
             <p>Phase: {report.phase}</p>
             <p>Status: {report.status}</p>
+            <p>Note:{report.note}</p>
+            <div className="photo">
             <img
               src="https://www.svgrepo.com/download/21045/delete-button.svg"
               alt=""
               onClick={() => deleteReport(report.id)}
             />
+            </div>
             <hr />
           </div>
         );
